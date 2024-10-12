@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 сынып</title>
+    <link rel="stylesheet" href="css/phproject.css">
+    <link rel="stylesheet" href="css/gradetest.css">
+</head>
+<body>
+    <header>
+        <p class="maintitle">7 сынып</p>
+    </header>
+    <aside class="sboku">
+        <div class="calculator">
+            <div class="input" id="input"></div>
+            <div class="buttons">
+            <div class="operators">
+                <div>+</div>
+                <div>-</div>
+                <div>&times;</div>
+                <div>&divide;</div>
+            </div>
+            <div class="leftPanel">
+                <div class="numbers">
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                </div>
+                <div class="numbers">
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                </div>
+                <div class="numbers">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                </div>
+                <div class="numbers">
+                <div>0</div>
+                <div>.</div>
+                <div id="clear">C</div>
+                </div>
+            </div>
+            <div class="equal" id="result">=</div>
+            </div>
+        </div>
+    </aside>
+	<sidebar class="mainsidebar">
+		<!-- <div class="sidebar">
+			<p class="metriki">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+			<p class="metriki">Lorem ipsum dolor sit amet.</p>
+			<p class="metriki">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+			<p class="metriki">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum in ratione, similique numquam ducimus sequi consequatur id!</p>
+			<p class="metriki">Lorem, ipsum.</p>
+		</div> -->
+		<table border="1" width="100%" height="100%"  class="sidebar">
+			<thead>
+				<tr>
+					<th>Бірлік</th>
+					<th>м</th>
+					<th>км</th>
+					<th>см</th>
+					<th>мм</th>
+					<th>мкм</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>1 м</td>
+				<td>1,00</td>
+				<td>10<sup>-3</sup></td>
+				<td>10<sup>2</sup></td>
+				<td>10<sup>3</sup></td>
+				<td>10<sup>6</sup></td>
+				</tr>
+				<tr>
+					<td>1 км</td>
+					<td>10<sup>3</sup></td>
+					<td>1,00</td>
+					<td>10<sup>5</sup></td>
+					<td>10<sup>6</sup></td>
+					<td>10<sup>9</sup></td>
+				</tr>
+				<tr>
+					<td>1 см</td>
+					<td>10<sup>-2</sup></td>
+					<td>10<sup>-5</sup></td>
+					<td>1,00</td>
+					<td>10,0</td>
+					<td>10<sup>4</sup></td>
+				</tr>
+				<tr>
+					<td>1 мм</td>
+					<td>10<sup>-3</sup></td>
+					<td>10<sup>-6</sup></td>
+					<td>0,100</td>
+					<td>1,00</td>
+					<td>10<sup>3</sup></td>
+				</tr>
+				<tr>
+					<td>1 мкм</td>
+					<td>10<sup>-6</sup></td>
+					<td>10<sup>-9</sup></td>
+					<td>10<sup>-4</sup></td>
+					<td>10<sup>-3</sup></td>
+					<td>1,00</td>
+				</tr>
+			</tbody>
+		  </table>
+    </sidebar>
+    <main>
+        <form id="main-form" onsubmit="return checkForm(this)">
+			<!-- <div class="nameform">
+				<label class="atname">
+					<span class="atzhzh">Аты-жөңіңізді, сыныбыңызды жазыңыз</span>
+					<input type="text" class="inputtext">
+				</label>
+			</div> -->
+			<div class="question">
+				<p>1. Физикалық теорияның негізгі мәселесі</p><br>
+				<label>
+					<input type="radio" name="first" value="a">
+					A) Құбылысты  түсіндіру
+				</label><br><br>
+				<label>
+					<input type="radio" name="first" id="ab" value="b">
+					B) Физикалық  эксперимент
+				</label><br><br>
+				<label>
+					<input type="radio" name="first" id="ac" value="c">
+					C) Физикалық  өлшеу
+				</label><br><br>
+				<label>
+					<input type="radio" name="first" id="ad" value="d">
+					D) Болжау  ұсыну 
+				</label><br><br>
+				<label>
+					<input type="radio" name="first" id="ae" value="e">
+					E) Физикалық  шаманы  есептеу
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>2. Халықаралық бірліктер жүйесіндегі ұзындықтың негізгі бірлігі</p><br>
+				<label>
+					<input type="radio" name="second" id="ba" value="a">
+					A) Миллиметр
+				</label><br><br>
+				<label>
+					<input type="radio" name="second" id="bb" value="b">
+					B) Сантиметр
+				</label><br><br>
+				<label for="bc">
+					<input type="radio" name="second" id="bc" value="c">
+					C) Метр
+				</label><br><br>
+				<label for="bd">
+					<input type="radio" name="second" id="bd" value="d">
+					D) Спидометр
+				</label><br><br>
+				<label for="be">
+					<input type="radio" name="second" id="be" value="e">
+					E) Километр
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>3.  Қандай шама миллиметрмен өлшенеді?</p><br>
+				<label for="">
+					<input type="radio" name="thirth" id="ca" value="a">
+					A) Аудан
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="thirth" id="cb" value="b">
+					B) Ұзындық
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="thirth" id="cc" value="c">
+					C) Жылдамдық
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="thirth" id="cd" value="d">
+					D) Уақыт
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="thirth" id="ce" value="e">
+					E) Көлем
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>4. Астрономияда арақашықтықты анықтауда астрономиялық бірлік (а. б.) қолданылады. Жерден Күнге дейінгі орташа қашықтық 150 млн км – ге  тең. Төмендегі нұсқалардың қайсысында 1а.б. стандарт түрге енгізілген?</p><br>
+				<label for="">
+					<input type="radio" name="fourth" id="da" value="a">
+					A) 0,15 · 10<sup>12</sup> м
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fourth" id="db" value="b">
+					B) 150 · 10<sup>6</sup> м
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fourth" id="dc" value="c">
+					C) 15 · 10<sup>10</sup> м
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fourth" id="dd" value="d">
+					D) 1,5 · 10<sup>11</sup> м 
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fourth" id="de" value="e">
+					E) 1,5 · 10<sup>12</sup> м
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>5. Микро тіркесі неге тең?</p><br>
+				<label for="">
+					<input type="radio" name="fiveth" id="ea" value="a">
+					A) 10<sup>-3</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fiveth" id="eb" value="b">
+					B) 10<sup>6</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fiveth" id="ec" value="c">
+					C) 10<sup>-9</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fiveth" id="ed" value="d">
+					D) 10<sup>3</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fiveth" id="ee" value="e">
+					E) 10<sup>-6</sup>
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>6. Мырыштың тығыздығы 7100 кг/м<sup>3</sup>. Мырыштың тығыздығын г/см<sup>3</sup> – мен  көрсетіңдер</p><br>
+				<label for="">
+					<input type="radio" name="sixth" id="fa" value="a">
+					A) 7,1 г/см<sup>3</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="sixth" id="fb" value="b">
+					B) 7 100 000 г/см<sup>3</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="sixth" id="fc" value="c">
+					C) 0,0071 г/см<sup>3</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="sixth" id="fd" value="d">
+					D) 0
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="sixth" id="fe" value="e">
+					E) 7100 г/см<sup>3</sup>
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>7. Заттың тығыздығын қай формуламен анықтайды?</p><br>
+				<label for="">
+					<input type="radio" name="seventh" id="ga" value="a">
+					A) F = m · g
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="seventh" id="gb" value="b">
+					B) p = m/V 
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="seventh" id="gc" value="c">
+					C) u = s/t
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="seventh" id="gd" value="d">
+					D) V = a · b · c
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="seventh" id="ge" value="e">
+					E) p = F/S
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>8. Деформация салдарынан серіппе сығылып, ұзындығы қысқарды. Мұндай жағдайда серпімділік күші қалай өзгереді?</p><br>
+				<label for="">
+					<input type="radio" name="eighth" id="ha" value="a">
+					A) Кемиді
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eighth" id="hb" value="b">
+					B) Өзгермейді
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eighth" id="hc" value="c">
+					C) Жауабы жоқ
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eighth" id="hd" value="d">
+					D) Артады
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eighth" id="he" value="e">
+					E) Басыңда өсіп соңында кемиді
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>9. Төмендегі формулалардан Гук заңының формуласын көрсетіңдер</p><br>
+				<label for="">
+					<input type="radio" name="ninth" id="ia" value="a">
+					A) F = mg
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="ninth" id="ib" value="b">
+					B) F = kΔl
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="ninth" id="ic" value="c">
+					C) u = s/t
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="ninth" id="id" value="d">
+					D) F = µ · N
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="ninth" id="ie" value="e">
+					E) p = F/S
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>10. Күштің  әсері  тоқтағаннан  кейін,  дененің  өзінің  пішіні  мен  өлшемін  толығымен  алғашқы  қалпына  келтіретін  деформация  қалай  аталады?</p><br>
+				<label for="">
+					<input type="radio" name="tenth" id="ja" value="a">
+					A) Нөлдік
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="tenth" id="jb" value="b">
+					B) Нақты
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="tenth" id="jc" value="c">
+					C) Пластикалық
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="tenth" id="jd" value="d">
+					D) Серпімді
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="tenth" id="je" value="e">
+					E) Формалды
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>11. Қысым – бұл...</p><br>
+				<label for="">
+					<input type="radio" name="eleventh" id="ka" value="a">
+					A) Күштің бет ауданына қатынасы
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eleventh" id="kb" value="b">
+					B) Бетке перпендикуяр бағытта әсер ететін күштің осы беттің ауданына қатынас
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eleventh" id="kc" value="c">
+					C) Бетке перпендикуляр бағатта әсер ететін күш
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eleventh" id="kd" value="d">
+					D) Күш әсер ететін беттің ауданы
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eleventh" id="ke" value="e">
+					E) Күштің әсерін сипаттайтын шама
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>12. 80м<sup>2</sup> ауданға әрекет ететін күш 400 Н. Осы күштің әрекетінен болатын қысымды анықтаңдар</p><br>
+				<label for="">
+					<input type="radio" name="twelfth" id="la" value="a">
+					A) 20Н/см<sup>2</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="twelfth" id="lb" value="b">
+					B) 5Н/см<sup>2</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="twelfth" id="lc" value="c">
+					C) 5Н/м<sup>2</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="twelfth" id="ld" value="d">
+					D) 50Н/см<sup>2</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="twelfth" id="le" value="e">
+					E) 50Па
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>13. Керосин қабатының 0,5м тереңдігінде, ыдыстың түбіне қандай қысым түседі?</p><br>
+				<label for="">
+					<input type="radio" name="thirteenth" id="ma" value="a">
+					A) 2Па
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="thirteenth" id="mb" value="b">
+					B) 4кПа
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="thirteenth" id="mc" value="c">
+					C) 40Н/м
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="thirteenth" id="md" value="d">
+					D) 4Н/м<sup>2</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="thirteenth" id="me" value="e">
+					E) 20Па
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>14. Архимед күші неге тең?</p><br>
+				<label for="">
+					<input type="radio" name="fourteenth" id="na" value="a">
+					A) F = m · g
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fourteenth" id="nb" value="b">
+					B) F = p · g · h
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fourteenth" id="nc" value="c">
+					C) F = p · g · h
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fourteenth" id="nd" value="d">
+					D) F = p<sup>ж</sup> · g · V
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fourteenth" id="ne" value="e">
+					E) F = k · x
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>15. Ұзындығы 102м, ені 60 см үстел бетіне ауаның түсіретін қысымын есептеңдер (атмосфералық қысым 105Па–ға тең)</p><br>
+				<label for="">
+					<input type="radio" name="fifteenth" id="oa" value="a">
+					A) 70кН
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fifteenth" id="ob" value="b">
+					B) 72кН
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fifteenth" id="oc" value="c">
+					C) 50Н
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fifteenth" id="od" value="d">
+					D) 55кН
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="fifteenth" id="oe" value="e">
+					E) 60кН
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>16. 4м/с жылдамдықпен қозғалатын массасы 3 кг дененің кинетикалық энергиясы неге тең?</p><br>
+				<label for="">
+					<input type="radio" name="sixteenth" id="pa" value="a">
+					A) 24 Дж
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="sixteenth" id="pb" value="b">
+					B) 12 Дж
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="sixteenth" id="pc" value="c">
+					C) 18 Дж
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="sixteenth" id="pd" value="d">
+					D) 6 Дж
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="sixteenth" id="pe" value="e">
+					E) 36 Дж
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>17. Егер дене F = 5Н күштің әрекетінен 3м–ге орын ауыстырса, жасалатын жұмыс неге тең болады?</p><br>
+				<label for="">
+					<input type="radio" name="seventeenth" id="qa" value="a">
+					A) 7,5 Дж
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="seventeenth" id="qb" value="b">
+					B) 18 Дж
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="seventeenth" id="qc" value="c">
+					C) 15 Дж
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="seventeenth" id="qd" value="d">
+					D) 75 Дж
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="seventeenth" id="qe" value="e">
+					E) 10 Дж
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>18. Күш моменті қандай формуламен өрнектеледі?</p><br>
+				<label for="">
+					<input type="radio" name="eighteenth" id="ra" value="a">
+					A) М = F · d
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eighteenth" id="rb" value="b">
+					B) М = F · k
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eighteenth" id="rc" value="c">
+					C) М = m · а
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eighteenth" id="rd" value="d">
+					D) М = k · х<sup>2</sup>
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="eighteenth" id="re" value="e">
+					E) М = m · g
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>19. Жылжымалы блок дегеніміз – </p><br>
+				<label for="">
+					<input type="radio" name="nineteenth" id="sa" value="a">
+					A) Жүкпен бірге блоктың айналу осі де көтеріліп немесе төмен түсіп отыратын блок
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="nineteenth" id="sb" value="b">
+					B) Жүкпен бірге блоктың айналу осі көтерілмейтін блок
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="nineteenth" id="sc" value="c">
+					C) Жүкпен бірге блоктың айналу осі төмен түсіп отыратын блок
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="nineteenth" id="sd" value="d">
+					D) Жүк көтерілгенде айналу осі не жоғары, не төмен қозғалмайтын блок
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="nineteenth" id="se" value="e">
+					E) Жүк көтерілгенде айналу осі жоғары қозғалмайтын блок
+				</label><br><br>
+			</div>
+            <div class="question">
+				<p>20.  Иінтірек  ұштарына  2  және  18  Н  күш  әрекет  етеді.  Иінтірек  ұзындығы  1 м.  Егер  иінтірек  тепе – теңдікте  болса,  онда  тірек  нүктесі  қай  жерде  болады?</p><br>
+				<label for="">
+					<input type="radio" name="twentieth" id="ta" value="a">
+					A) 18Н күштен 20см қашықтықта
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="twentieth" id="tb" value="b">
+					B) 18Н күштен 10см қашықтықта
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="twentieth" id="tc" value="c">
+					C) 18Н күштен 30см қашықтықта
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="twentieth" id="td" value="d">
+					D) 18Н күштен 40см қашықтықта
+				</label><br><br>
+				<label for="">
+					<input type="radio" name="twentieth" id="te" value="e">
+					E) 18Н күштен 50см қашықтықта
+				</label><br><br>
+			</div>
+            <div class="submit">
+				<input type="submit" id="sub" value="Баллды саннау">
+			</div>
+        </form>
+    </main><br><br>
+    <footer>
+        <div>
+            <p>Made by <i>Амангельдинов Еламан, СОШ №7</i></p>
+        </div>
+    </footer>
+
+	<script src="gradetest.js"></script>
+    <script src="sevengrade.js"></script>
+    <script src="phproject.js"></script>
+</body>
+</html>
